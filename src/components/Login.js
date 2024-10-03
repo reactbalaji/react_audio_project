@@ -22,9 +22,11 @@ const Login = () => {
                 sessionStorage.setItem("token",apiCall.data.accessToken);
                 navigate('/audioUpload');
             } else {
+                alert(apiCall.data.message)
                 console.log(apiCall.data.message);
             }
         } catch (error) {
+            alert("Something went wrong")
             console.log(error.status)
         }
 
